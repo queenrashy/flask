@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index page</title>
+</head>
+<body>
+    <h1>Hello world!</h1>
+    <p> This is me</p>
+    <p>my name is {{ first_name}} </p>
+    <p> {{stuff|title}} </p>
+    <h3>Favorite pizza:</h3>
+{% for topping in favorite_pizza %}
+    {{topping}} <br>
+
+    {% if topping == 41 %}
+        {{topping + 100}} <br>
+    {% else  %}
+        {{topping}}
+
+    {% endif %}
+
+
+{%  endfor %}
+<br> <br>
+
+{{favorite_pizza.3 + 10}}
+
+
+</body>
+</html>
